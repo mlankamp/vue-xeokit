@@ -1,0 +1,116 @@
+.navCube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 950;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.viewer {
+  width: 100%;
+  height: calc(100vh - var(--v-layout-top));
+  pointer-events: all;
+  margin: 0;
+}
+
+.treeViewContainer {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 300ms ease-in-out;
+  user-select: none;
+  pointer-events: all;
+  padding: 16px;
+
+  .treeWrapper {
+    margin-left: -32px;
+  }
+
+  .treeWrapper ul {
+    list-style: none;
+    padding-left: 18px;
+  }
+
+  .treeWrapper ul li div {
+    padding-left: 8px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .treeWrapper ul li div.v-treeview-node__level{
+    width: 24px;
+    display: inline-flex;
+  }
+
+  .treeWrapper ul li button {
+    display: inline-flex;
+  }
+  
+  .treeWrapper ul li input {
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .treeWrapper ul li input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .treeWrapper ul li input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 3px;
+    background-color:#fff;
+  }
+
+  .treeWrapper ul li input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border: 2px solid #398684;
+    background-color: #398684 !important;
+  }
+  .treeWrapper ul li input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+  }
+  
+  .treeWrapper ul li span {
+    vertical-align: middle;
+    margin-left: 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+}
