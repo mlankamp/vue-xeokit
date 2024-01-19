@@ -19,5 +19,22 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+    // Rollup Options
+    // https://vitejs.dev/config/build-options.html#build-rollupoptions
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          ui: [
+            'vue',
+            'vuetify'
+          ],
+          xeokit: [
+            '@xeokit/xeokit-sdk',
+          ],
+        }
+      },
+    }
+  },
 });

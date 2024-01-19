@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Build search file
-        run: npm run build
+        run: npm run build-only
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
