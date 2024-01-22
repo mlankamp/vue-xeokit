@@ -14,13 +14,13 @@
   "dependencies": {
     "@xeokit/xeokit-sdk": "2.5.2-beta-7",
     "vue": "^3.4.15",
-    "vuetify": "^3.5.0"
+    "vuetify": "^3.5.1"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@tsconfig/node-lts": "latest",
     "@types/node": "latest",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^5.0.3",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.56.0",
