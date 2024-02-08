@@ -14,7 +14,7 @@
   "dependencies": {
     "@xeokit/xeokit-sdk": "2.5.2-beta-20",
     "vue": "^3.4.15",
-    "vuetify": "^3.5.2"
+    "vuetify": "^3.5.3"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",
