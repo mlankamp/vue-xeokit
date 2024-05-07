@@ -30,7 +30,7 @@
     "eslint-plugin-vue": "^9.25.0",
     "eslint-plugin-vuetify": "^2.4.0",
     "npm-run-all2": "^6.1.2",
-    "sass": "^1.76.0",
+    "sass": "^1.77.0",
     "typescript": "~5.4.5",
     "vite": "^5.2.11",
     "vite-plugin-vuetify": "^2.0.3",
