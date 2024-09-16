@@ -12,7 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@xeokit/xeokit-sdk": "2.6.38",
+    "@xeokit/xeokit-sdk": "2.6.43",
     "vue": "^3.5.5",
     "vuetify": "^3.7.1"
   },
