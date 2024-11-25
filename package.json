@@ -28,7 +28,7 @@
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-html": "^8.1.2",
     "eslint-plugin-vue": "^9.31.0",
-    "eslint-plugin-vuetify": "^2.4.0",
+    "eslint-plugin-vuetify": "^2.5.1",
     "npm-run-all2": "^7.0.1",
     "sass": "^1.81.0",
     "typescript": "~5.6.3",
