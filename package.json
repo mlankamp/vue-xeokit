@@ -21,7 +21,7 @@
     "@tsconfig/node-lts": "latest",
     "@types/node": "^22.9.3",
     "@vitejs/plugin-vue": "^5.2.0",
-    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/eslint-config-typescript": "^14.1.4",
     "@vue/tsconfig": "^0.6.0",
     "eslint": "^8.57.1",
     "eslint-import-resolver-alias": "^1.1.2",
