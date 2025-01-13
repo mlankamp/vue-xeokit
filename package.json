@@ -14,26 +14,25 @@
   "dependencies": {
     "@xeokit/xeokit-sdk": "2.6.62",
     "vue": "^3.5.13",
-    "vuetify": "^3.7.4"
+    "vuetify": "^3.7.6"
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@tsconfig/node-lts": "latest",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/eslint-config-typescript": "^13.0.0",
-    "@vue/tsconfig": "^0.6.0",
-    "eslint": "^8.57.1",
-    "eslint-import-resolver-alias": "^1.1.2",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.12.0",
     "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import-x": "^4.3.1",
     "eslint-plugin-html": "^8.1.2",
-    "eslint-plugin-vue": "^9.32.0",
-    "eslint-plugin-vuetify": "^2.5.1",
-    "npm-run-all2": "^7.0.1",
-    "sass": "^1.81.0",
-    "typescript": "~5.7.2",
-    "vite": "^5.4.11",
+    "eslint-plugin-vue": "^9.29.0",
+    "npm-run-all2": "^7.0.2",
+    "sass": "^1.83.1",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.19.1",
+    "vite": "^6.0.7",
     "vite-plugin-vuetify": "^2.0.4",
-    "vue-tsc": "https://pkg.pr.new/vuejs/language-tools/vue-tsc@3fb59af"
+    "vue-tsc": "2.2.0"
   }
 }

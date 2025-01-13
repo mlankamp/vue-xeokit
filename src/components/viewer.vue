@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref, type Ref } from 'vue';
 
 import { NavCubePlugin, TreeViewPlugin, Viewer, XKTLoaderPlugin } from '@xeokit/xeokit-sdk';
+
 import renderService from '../treeviewRenderService';
 
 const mainCanvas = ref<HTMLCanvasElement>();
