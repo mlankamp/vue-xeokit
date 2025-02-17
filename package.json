@@ -33,6 +33,6 @@
     "typescript-eslint": "^8.23.0",
     "vite": "^6.1.0",
     "vite-plugin-vuetify": "^2.0.4",
-    "vue-tsc": "2.2.0"
+    "vue-tsc": "2.2.2"
   }
 }
