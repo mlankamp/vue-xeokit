@@ -132,10 +132,10 @@ const renderService: ITreeViewRenderService = {
         checkbox.checked = checked;
       }
       if (indeterminate !== checkbox.indeterminate) {
-        checkbox.indeterminate = indeterminate;
         if (indeterminate) {
           checkbox.checked = false;
         }
+        checkbox.indeterminate = indeterminate;
       }
     }
   },

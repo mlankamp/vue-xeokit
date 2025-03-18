@@ -37,7 +37,9 @@ onMounted(() => {
     containerElement: treeContainer.value,
     hierarchy: 'containment',
     autoExpandDepth: 3,
-    renderService: renderService
+    renderService: renderService,
+    showIndeterminate: true,
+    pruneEmptyNodes: true
   });
 
   const xktLoader = new XKTLoaderPlugin(viewer.value);
