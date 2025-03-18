@@ -30,6 +30,7 @@ onMounted(() => {
 
   new NavCubePlugin(viewer.value, {
     canvasElement: cubeCanvas.value,
+    color: '#fff',	
     visible: true,
   });
 
