@@ -31,6 +31,7 @@ const renderService: ITreeViewRenderService = {
     checkbox.id = `cb-${node.nodeId}`;
     checkbox.type = 'checkbox';
     checkbox.checked = node.checked;
+    checkbox.indeterminate = node.numVisibleEntities > 0 && !node.checked;
     checkbox.style.pointerEvents = 'all';
     if (checkHandler) checkbox.addEventListener('change', checkHandler);
     wrapperDiv.appendChild(checkbox);
@@ -124,11 +125,17 @@ const renderService: ITreeViewRenderService = {
   isChecked: (element: HTMLInputElement) => {
     return element.checked;
   },
-  setCheckbox: (nodeId, checked) => {
+  setCheckbox: (nodeId, checked, indeterminate = false) => {
     const checkbox = document.getElementById(`cb-${nodeId}`) as HTMLInputElement;
     if (checkbox) {
       if (checked !== checkbox.checked) {
         checkbox.checked = checked;
+      }
+      if (indeterminate !== checkbox.indeterminate) {
+        checkbox.indeterminate = indeterminate;
+        if (indeterminate) {
+          checkbox.checked = false;
+        }
       }
     }
   },
