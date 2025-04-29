@@ -54,7 +54,7 @@ onMounted(() => {
   const t0 = performance.now();
   sceneModel.on('loaded', function () {
     const t1 = performance.now();
-    console.log(`Model loaded in ${Math.floor(t1 - t0) / 1000.0} seconds, Objects: ${sceneModel.numEntities}`);
+    //console.log(`Model loaded in ${Math.floor(t1 - t0) / 1000.0} seconds, Objects: ${sceneModel.numEntities}`);
   });
 });
 
