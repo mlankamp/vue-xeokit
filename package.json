@@ -19,7 +19,7 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@tsconfig/node-lts": "latest",
-    "@types/node": "~22.19.0",
+    "@types/node": "~22.19.1",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.1",
