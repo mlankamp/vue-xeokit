@@ -1,9 +1,11 @@
 {
   "recommendations": [
     "Vue.volar",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "oxc.oxc-vscode"
   ],
   "unwantedRecommendations": [
+    "octref.vetur",
     "Vue.vscode-typescript-vue-plugin"
   ]
 }

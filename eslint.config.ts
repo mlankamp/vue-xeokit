@@ -1,7 +1,10 @@
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import { globalIgnores } from 'eslint/config'
+import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript';
+
 import pluginImportX from 'eslint-plugin-import-x';
+import pluginOxlint from 'eslint-plugin-oxlint';
 import pluginVue from 'eslint-plugin-vue';
+import globals from 'globals';
 
 const ignores = [
   '.env',
@@ -9,7 +12,7 @@ const ignores = [
   '.vscode',
   'coverage',
   'dist',
-  'eslint.config.js',
+  'eslint.config.ts',
   'public',
   'node_modules/**/*',
   'package.json',
@@ -22,22 +25,22 @@ const ignores = [
  * ESLint Config
  */
 // @ts-check
-export default tseslint.config(
-  {
-    ignores
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylistic,
-  ...pluginVue.configs['flat/recommended'],
+export default defineConfigWithVueTs(
+
+  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**', ...ignores]),
+
+  pluginVue.configs['flat/recommended'],
+  vueTsConfigs.recommended,
+
   {
     languageOptions: {
-      parserOptions: {
-        parser: tseslint.parser,
-        tsconfigRootDir: import.meta.dirname,
-        extraFileExtensions: ['.vue'],
-        ecmaVersion: 'latest',
-        sourceType: 'module'
+      globals: {
+        // Add browser environment globals (window, document, etc.) to prevent
+        // ESLint from flagging them as undefined
+        ...globals.browser,
+        // Add ES2021 environment globals (BigInt, WeakRef, etc.) to prevent
+        // ESLint from flagging them as undefined
+        ...globals.es2021,
       }
     },
     plugins: {
@@ -209,10 +212,10 @@ export default tseslint.config(
         }
       ],
       'vue/mustache-interpolation-spacing':
-      [
-        'error',
-        'always'
-      ],
+        [
+          'error',
+          'always'
+        ],
       'vue/singleline-html-element-content-newline': 'off',
       'vue/html-closing-bracket-spacing': [
         "error",
@@ -225,14 +228,9 @@ export default tseslint.config(
       'vue/valid-v-slot': ['error', {
         allowModifiers: true,
       }],
-      '@typescript-eslint/array-type': [
-        'error',
-        {
-          default: 'array'
-        }
-      ],
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/no-unused-vars': 'off'
     }
-  }
+  },
+  ...pluginOxlint.configs['flat/recommended'],
 );
