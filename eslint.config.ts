@@ -4,7 +4,6 @@ import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescri
 import pluginImportX from 'eslint-plugin-import-x';
 import pluginOxlint from 'eslint-plugin-oxlint';
 import pluginVue from 'eslint-plugin-vue';
-import globals from 'globals';
 
 const ignores = [
   '.env',
@@ -33,16 +32,6 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
 
   {
-    languageOptions: {
-      globals: {
-        // Add browser environment globals (window, document, etc.) to prevent
-        // ESLint from flagging them as undefined
-        ...globals.browser,
-        // Add ES2021 environment globals (BigInt, WeakRef, etc.) to prevent
-        // ESLint from flagging them as undefined
-        ...globals.es2021,
-      }
-    },
     plugins: {
       'import-x': pluginImportX
     },
