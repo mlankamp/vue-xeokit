@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@xeokit/xeokit-sdk": "^2.6.106",
-    "vue": "^3.5.30",
+    "vue": "^3.5.31",
     "vuetify": "^4.0.2"
   },
   "devDependencies": {
