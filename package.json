@@ -28,7 +28,7 @@
     "eslint": "^10.1.0",
     "eslint-plugin-html": "^8.1.4",
     "eslint-plugin-import-x": "^4.16.2",
-    "eslint-plugin-oxlint": "^1.51.0",
+    "eslint-plugin-oxlint": "^1.57.0",
     "eslint-plugin-vue": "^10.8.0",
     "jiti": "^2.6.1",
     "npm-run-all2": "^8.0.4",
