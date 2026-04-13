@@ -7,5 +7,6 @@ import Viewer from '@/components/viewer.vue';
     <v-app-bar title="Vue, typescript and Xeokit" />
 
     <viewer />
+    <v-icon />
   </v-app>
 </template>
