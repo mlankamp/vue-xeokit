@@ -9,3 +9,27 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    groups:
+      # Group all linting related packages
+      linting:
+        patterns:
+          - 'eslint'
+          - '@eslint/*'
+          - 'eslint-plugin-*'
+          - 'oxlint'
+          - 'oxlint-*'
+          - '@vue/eslint-config-typescript'
+      # Group TypeScript type definitions and compiler
+      types:
+        patterns:
+          - '@types/*'
+          - '@tsconfig/*'
+          - 'typescript'
+          - '@vue/tsconfig'
+      # Group TypeScript type definitions and compiler
+      vue:
+        patterns:
+          - 'vue*'
+          - 'vite*'
+          - '@vue/tsconfig'
+          - '@vitejs/*'
