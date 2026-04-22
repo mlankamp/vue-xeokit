@@ -14,7 +14,7 @@
     "lint": "run-s lint:*"
   },
   "dependencies": {
-    "@xeokit/xeokit-sdk": "2.6.106",
+    "@xeokit/xeokit-sdk": "2.6.108",
     "vue": "^3.5.32",
     "vuetify": "^4.0.4"
   },
