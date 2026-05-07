@@ -30,7 +30,7 @@
     "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-oxlint": "^1.63.0",
     "eslint-plugin-vue": "^10.9.1",
-    "jiti": "^2.6.1",
+    "jiti": "^2.7.0",
     "npm-run-all2": "^8.0.4",
     "oxlint": "^1.59.0",
     "sass": "^1.98.0",
