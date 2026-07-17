@@ -21,7 +21,7 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@tsconfig/node-lts": "latest",
-    "@types/node": "~26.1.0",
+    "@types/node": "~26.1.1",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/eslint-config-typescript": "^14.9.0",
     "@vue/tsconfig": "^0.9.0",
@@ -34,7 +34,7 @@
     "npm-run-all2": "^9.0.2",
     "oxlint": "^1.74.0",
     "sass": "^1.101.0",
-    "typescript": "~6.0.3",
+    "typescript": "~7.0.2",
     "vite": "^8.1.3",
     "vite-plugin-vuetify": "^2.1.3",
     "vue-tsc": "3.3.7"
