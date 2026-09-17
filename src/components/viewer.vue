@@ -59,7 +59,7 @@ onMounted(() => {
   const xktLoader = new XKTLoaderPlugin(viewer.value);
   const sceneModel = xktLoader.load({
     id: 'Widget',
-    src: 'https://xeokit.io/examples/assets/models/xkt/v10/ifc/rac.xkt',
+    src: '/vue-xeokit/rac.xkt',
     saoEnabled: true,
     edges: false,
     dtxEnabled: true
