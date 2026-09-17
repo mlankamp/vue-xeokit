@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, type Ref } from 'vue';
 
-import { NavCubePlugin, TreeViewPlugin, Viewer, XKTLoaderPlugin } from '@xeokit/xeokit-sdk';
+import { NavCubePlugin, TreeViewPlugin, Viewer, XKTLoaderPlugin, FastNavPlugin } from '@xeokit/xeokit-sdk';
 
 import renderService from '../treeviewRenderService';
 
@@ -13,7 +13,8 @@ const viewer: Ref<Viewer | null> = ref(null);
 onMounted(() => {
   viewer.value = new Viewer({
     canvasElement: mainCanvas.value,
-    transparent: true
+    transparent: true,
+    saoEnabled: true
   });
 
   const cameraControl = viewer.value.cameraControl;
@@ -43,12 +44,25 @@ onMounted(() => {
     pruneEmptyNodes: true
   });
 
+  new FastNavPlugin(viewer.value, {
+    hideEdges: true,
+    hideSAO: true,
+    hideColorTexture: false,
+    hidePBR: false,
+    hideTransparentObjects: false,
+    scaleCanvasResolution: false,
+    scaleCanvasResolutionFactor: 0.5,
+    delayBeforeRestore: true,
+    delayBeforeRestoreSeconds: 0.4
+  });
+
   const xktLoader = new XKTLoaderPlugin(viewer.value);
   const sceneModel = xktLoader.load({
     id: 'Widget',
-    src: 'https://xeokit.github.io/xeokit-sdk/assets/models/xkt/v10/ifc/rac.xkt',
-    edges: true,
-    excludeUnclassifiedObjects: false
+    src: 'https://xeokit.io/examples/assets/models/xkt/v10/ifc/rac.xkt',
+    saoEnabled: true,
+    edges: false,
+    dtxEnabled: true
   });
 
   sceneModel.on('loaded', function () {
